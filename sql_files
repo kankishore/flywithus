@@ -1,0 +1,60 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jun 27, 2018 at 11:43 AM
+-- Server version: 10.1.29-MariaDB
+-- PHP Version: 7.2.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `flywithus`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `flight_details`
+--
+
+CREATE TABLE `flight_details` (
+  `fno` int(20) NOT NULL,
+  `airline` varchar(20) NOT NULL,
+  `source` varchar(20) NOT NULL,
+  `destination` varchar(20) NOT NULL,
+  `duration` varchar(20) DEFAULT NULL,
+  `cost` float NOT NULL,
+  `starttime` time DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `flight_details`
+--
+
+INSERT INTO `flight_details` (`fno`, `airline`, `source`, `destination`, `duration`, `cost`, `starttime`) VALUES
+(2000, 'Spicejet', 'Bangalore', 'Hyderabad', '5hours', 5000, '19:10:00'),
+(1000, 'Kingfisher', 'Bangalore', 'Delhi', '3hours', 6000, '23:18:20'),
+(1001, 'Kingfisher', 'Bangalore', 'Goa', '1hour', 2000, '04:10:00'),
+(1002, 'Kingfisher', 'Bangalore', 'Mangalore', '3hours', 7000, '19:50:00'),
+(1003, 'Kingfisher', 'Delhi', 'Bangalore', '3hours', 2000, '20:20:00'),
+(1004, 'Kingfisher', 'Delhi', 'Hyderabad', '4hours', 3000, '05:10:00'),
+(1004, 'Kingfisher', 'Delhi', 'Goa', '1hour', 2000, '19:40:00'),
+(1005, 'Kingfisher', 'Delhi', 'Mangalore', '6hours', 7000, '22:10:00'),
+(1006, 'Kingfisher', 'Hyderabad', 'Mangalore', '5hours', 5000, '23:10:00'),
+(1007, 'Kingfisher', 'Hyderabad', 'Goa', '2hours', 3000, '23:10:00');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
