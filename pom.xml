@@ -8,6 +8,7 @@
     <packaging>war</packaging>
 
     <name>internmaven</name>
+    <url>http://maven.apahe.org</url>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
@@ -78,6 +79,7 @@
                 </executions>
             </plugin>
         </plugins>
+        <finalName>flywithus</finalName>
     </build>
 
 </project>
